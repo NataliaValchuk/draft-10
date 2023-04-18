@@ -8,7 +8,6 @@ const searchBox = document.querySelector('#search-box');
 const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
 
-
 const searchInput = e => {
   const searchCountry = e.target.value.trim();
   if (searchCountry === '') {
@@ -20,7 +19,7 @@ const searchInput = e => {
   fetchCountries(searchCountry)
     .then(countries => {
       if (countries.length > 10) {
-       Notiflix.Notify.info(
+        Notiflix.Notify.info(
           'Too many matches found. Please enter a more specific name.'
         );
         return;
